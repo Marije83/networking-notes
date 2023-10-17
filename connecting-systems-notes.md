@@ -9,7 +9,7 @@
     "acts as athe 'traffic cop' sitting in front of your servers and routing client requests across all servers capable of fulfilling those requests in a manner of that maximizes speec and capacity utilizatio  and ensures that no one server is overworked" (NGINX)
     Private key for SSL certificate is installed on loadbalancer and SSL termination occurs on the load balancer (i.e. where it is decrypted), and connection between balancer and server is unencrypted (slides).
 
-    ![Load balancing diagram (NGINX)](https://www.nginx.com/wp-content/uploads/2014/07/what-is-load-balancing-diagram-NGINX.png)
+![Load balancing diagram (NGINX)](https://www.nginx.com/wp-content/uploads/2014/07/what-is-load-balancing-diagram-NGINX.png)
    
 ## Types of load balancing
 ### Application load balancing
@@ -105,7 +105,7 @@
     A firewall looks at data packets and decides if it can continue or should be blocked based on where it came from and/or where it is going (BU)
     Packets can be accepted, denied or dropped, though denying is uncommon as it uses up bandwidth on its return trip, and because there is little added value to it (BU)
     
-    ![Your network makes request to internet --> firewall scans and filters te data --> Your network granted access to requested source](https://us.norton.com/content/dam/blogs/images/norton/am/how-a-firewall-works.png)
+![Your network makes request to internet --> firewall scans and filters te data --> Your network granted access to requested source](https://us.norton.com/content/dam/blogs/images/norton/am/how-a-firewall-works.png)
         
 ## Firewall technology
     Can be software or hardware (slides, Norton, BU), or cloud-based (FaaS, Firewall as a service), which can grow with your organisation and o well with perimeter security (like hardware). (Norton)
@@ -163,7 +163,19 @@
     - control incoming and outgoing traffic (Norton)
     - decides whether or not to allow traffic to individual devices (Norton) wheter the traffic comes from the intenet, the local network or from itself (BU)
     - protects the host (Norton)
-        
+
+## Micro-segmentation
+    applies security to an individual host (maching or virtual machine) rather than to a network or subnet (slides)
+    "creates secure zones across clouds and data center environments to isolate application workloads from one another and secure them individually" (Cisco)
+    
+### benefits
+    Avoids issues with too many firewall administrators have access to the only set of firewall rules. (slides)
+    Instead control of host level firewall is constrained to users of that host and it also allows for more flexibility in which hosts have which rules as they don't all need same set of rules (slides)
+    Reduces attack surface and prevents breaches to spread to other hosts
+    
+### Challenges
+    Policy lifecycle management is more difficult to maintain across the different hosts (when you want certain parts of the policy to be universal across all hosts???) (Cisco)
+
 # VPNs and NATs
     VPN: virtual private network. Disguises IP address when using public networks (Norton)
     NAT: network address translation: Creates secur and public IP address for all devices on the same network (Norton)
@@ -171,6 +183,7 @@
 # References
 - AWS. 2023. What is Load Balancing. Available from [AWS What is Load Balancing](https://aws.amazon.com/what-is/load-balancing/) Last accessed on 16/10/2023 
 - BU TechWeb. 2023. How Firewalls Work. Boston University. [BU TechWeb Firewalls] (https://www.bu.edu/tech/about/security-resources/host-based/intro/) Last accessed on 17/10/2023 
+- Cisco. 2023. What Is Micro-Segmentation?. [Cisco microsegmentation] (https://www.cisco.com/c/en/us/products/security/what-is-microsegmentation.html) Last accessed on 17/10/2023
 - MDN. 2023. Proxy servers and tunneling. Available from [MDN web docs_ Proxy serves and tunneling] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) Last accessed on 16/10/2023
 - NGINX. 2023. What Is Load Balancing. Available from [NGINX What is Load Balancing] (https://www.nginx.com/resources/glossary/load-balancing/) Last accessed on 16/10/2023
 - Norton. 2023. What is a firewall. Firewalls explained and why you need one. [Norton firewall] (https://us.norton.com/blog/privacy/firewall) Last accessed on 17/10/2023
