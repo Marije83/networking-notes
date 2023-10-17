@@ -107,22 +107,47 @@
     
     ![Your network makes request to internet --> firewall scans and filters te data --> Your network granted access to requested source](https://us.norton.com/content/dam/blogs/images/norton/am/how-a-firewall-works.png)
         
-##Firewall technology
+## Firewall technology
     Can be software or hardware (slides, Norton, BU), or cloud-based (FaaS, Firewall as a service), which can grow with your organisation and o well with perimeter security (like hardware). (Norton)
     Many devices have some built-in firewall (Norton)
     Generally placed at edge of systemm, though some designs also have rules that restrict traffic between subnets (e.g. between Application and Data submet) (Slides)
     
-    | Type of Firewall | Purpose |
-    | ---------------- | ------- |
-    | Packet-filtering firewall | basic for small networks; usually software; blocks network traffic IP protocol, IP addresses and port numbers; does not block web-traffic so vulnerable to web-based attacks (Norton) |
-    | proxy service firewall | filters communication between your network and outside networks at the application layer; usually software; uses stateful and deep-packet inspection tech to analyze incoming traffic (Norton) |
-    | stateful multi-layer inspection firewall | Administrators can add extra filters; keeps a database of vetted connections; usually hardware; (Norton) more complex than other firewalls (so requires more resources, but also allows more complex rules)(BU) |
-    | unified threat management firewall | similat to SMLI firewalls with anitivirus and intrusion prevention; usually software; sometimes also includes cloud management (Norton) |
-    | next-generation firewall | advanced capabilities that extensively inspect potential threats; usually software; inspects both header and content/source (others only header?); ability to block advanced malware (Norton) |
-    | NAT firewalls | Blocks any unsolicited attempts to access your network; usually software (Norton) |
-    | Virtual firewall | Basic; operates over cloud; can manage both physical and virtual networks (Norton) |
-    | Application firewall | specifically coded for the type of traffic it is inspecting (e.g. a web application firewall) (BU); bases decisions on data in the packet rather than source and destination addresses (BU); allows for more sophisticated rules (e.g. limit nr of requests, slides, or limit nr of characters URL BU); understands type of traffic it is receiving and can make sensible decisions (e.g. to avoid SQL Injection attack) (slides);
-        can react quickly to DDoS attacks (slides) |
+### Packet-filtering firewall
+    - basic for small networks; 
+    - usually software; 
+    - blocks network traffic IP protocol, IP addresses and port numbers; 
+    - does not block web-traffic so vulnerable to web-based attacks (Norton) |
+### proxy service firewall
+    - filters communication between your network and outside networks at the application layer; 
+    - usually software; 
+    - uses stateful and deep-packet inspection tech to analyze incoming traffic (Norton) |
+### stateful multi-layer inspection firewall
+    - Administrators can add extra filters; 
+    - keeps a database of vetted connections; 
+    - usually hardware; (Norton) 
+    - more complex than other firewalls (so requires more resources, but also allows more complex rules)(BU)
+### unified threat management firewall
+    - similar to SMLI firewalls but with anitivirus and intrusion prevention; 
+    - usually software; 
+    - sometimes also includes cloud management (Norton)
+### next-generation firewall
+    - advanced capabilities that extensively inspect potential threats; 
+    - usually software; 
+    - inspects both header and content/source (others only header?); 
+    - ability to block advanced malware (Norton)
+### NAT firewalls 
+    - Blocks any unsolicited attempts to access your network; 
+    - usually software (Norton)
+### Virtual firewall
+    - Basic; 
+    - operates over cloud; 
+    - can manage both physical and virtual networks (Norton)
+### Application firewall
+    - specifically coded for the type of traffic it is inspecting (e.g. a web application firewall) (BU); 
+    - bases decisions on data in the packet rather than source and destination addresses (BU); 
+    - allows for more sophisticated rules (e.g. limit nr of requests, slides, or limit nr of characters URL BU); 
+    - understands type of traffic it is receiving and can make sensible decisions (e.g. to avoid SQL Injection attack) (slides);
+    - can react quickly to DDoS attacks (slides)
     
 ## Host vs network based firewalls
     **network firewalls** filter traffic going between the internet and secured local area networks (LAN) (Norton) implemented at a specified point in the network path (BU)
@@ -144,11 +169,11 @@
     NAT: network address translation: Creates secur and public IP address for all devices on the same network (Norton)
 
 # References
-AWS. 2023. What is Load Balancing. Available from [AWS What is Load Balancing](https://aws.amazon.com/what-is/load-balancing/) Last accessed on 16/10/2023 
-BU TechWeb. 2023. How Firewalls Work. Boston University. [BU TechWeb Firewalls] (https://www.bu.edu/tech/about/security-resources/host-based/intro/) Last accessed on 17/10/2023 
-MDN. 2023. Proxy servers and tunneling. Available from [MDN web docs_ Proxy serves and tunneling] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) Last accessed on 16/10/2023
-NGINX. 2023. What Is Load Balancing. Available from [NGINX What is Load Balancing] (https://www.nginx.com/resources/glossary/load-balancing/) Last accessed on 16/10/2023
-Norton. 2023. What is a firewall. Firewalls explained and why you need one. [Norton firewall] (https://us.norton.com/blog/privacy/firewall) Last accessed on 17/10/2023
-okta. 2023. Understanding Proxy Servers and How They Work. Available from [okta proxy servers](https://www.okta.com/identity-101/proxy-server/) Last accessed on 17/10/2023
-Wikipedia. 2023. Proxy server. Available from [Wikipedia Proxy server](https://en.wikipedia.org/wiki/Proxy_server) Las access on 16/20/2023
+- AWS. 2023. What is Load Balancing. Available from [AWS What is Load Balancing](https://aws.amazon.com/what-is/load-balancing/) Last accessed on 16/10/2023 
+- BU TechWeb. 2023. How Firewalls Work. Boston University. [BU TechWeb Firewalls] (https://www.bu.edu/tech/about/security-resources/host-based/intro/) Last accessed on 17/10/2023 
+- MDN. 2023. Proxy servers and tunneling. Available from [MDN web docs_ Proxy serves and tunneling] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) Last accessed on 16/10/2023
+- NGINX. 2023. What Is Load Balancing. Available from [NGINX What is Load Balancing] (https://www.nginx.com/resources/glossary/load-balancing/) Last accessed on 16/10/2023
+- Norton. 2023. What is a firewall. Firewalls explained and why you need one. [Norton firewall] (https://us.norton.com/blog/privacy/firewall) Last accessed on 17/10/2023
+- okta. 2023. Understanding Proxy Servers and How They Work. Available from [okta proxy servers](https://www.okta.com/identity-101/proxy-server/) Last accessed on 17/10/2023
+- Wikipedia. 2023. Proxy server. Available from [Wikipedia Proxy server](https://en.wikipedia.org/wiki/Proxy_server) Las access on 16/20/2023
 
