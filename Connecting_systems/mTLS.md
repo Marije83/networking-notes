@@ -53,7 +53,7 @@ The general process for mTLS is the same for dealing with personal and sensitive
 - Private certificates can be stolen if used in untrustworthy environments. (f5)
 
 ## Diagram to show how mTLS works
-![diagram showing how mTLS works](Connecting_systems/mTLS.ping)
+![diagram showing how mTLS works](mTLS.png)
 
 # References
 - Cloudflare. 2023. What is mutual TLS (mTLS)? Available from [https://www.cloudflare.com/en-gb/learning/access-management/what-is-mutual-tls/] Last accessed on 30/10/2023
